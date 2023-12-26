@@ -5,7 +5,6 @@ import os
 # url to download file
 URL_REGISTRE: str = ('https://www.registreentreprises.gouv.qc.ca/RQAnonymeGR/GR/GR03/GR03A2_22A_PIU_RecupDonnPub_PC'
                      '/FichierDonneesOuvertes.aspx')
-
 DOWNLOAD_PATH: str = os.path.join(os.path.dirname(__file__), r'download\\')
 DOWNLOAD_FILE_PATH: str = os.path.join(DOWNLOAD_PATH, 'jeuxDonnees.zip')
 
@@ -16,6 +15,7 @@ FAILED_TO_UNZIP: str = 'failed to unzip file'
 # good message
 DOWNLOAD_SUCCESS: str = 'Download files with success'
 CONNEXION_SUCCESS: str = 'Connexion with server success : '
+UNZIP_SUCCESS: str = 'Files unzip with success'
 
 # Http utils
 HEADERS: dict = {
@@ -27,8 +27,22 @@ HEADERS: dict = {
 
 # end part download and unzip
 
+# start part filtering csv
+
+ENTREPRISE_BASE: str = os.path.join(DOWNLOAD_PATH, 'Entreprise.csv')
+TRANSFO_BASE: str = os.path.join(DOWNLOAD_PATH, 'ContinuationsTransformations.csv')
+ETABLISSEMENT_BASE: str = os.path.join(DOWNLOAD_PATH, 'Etablissements.csv')
+FUSCI_BASE: str = os.path.join(DOWNLOAD_PATH, 'FusionScissions.csv')
+NOM_BASE: str = os.path.join(DOWNLOAD_PATH, 'Nom.csv')
+DOMAINE_BASE: str = os.path.join(DOWNLOAD_PATH, 'DomaineValeur.csv')
+
+
+
 # filter constant
 STATUS_IMMAT: str = 'IM'
-EMPLOYEE_NUMBER: str = 'A'
+INDICE_FAILLITE : str = 'N'
 CODE_FORME_JURI: str = 'IND'
-LAST_UPDATE: int = 2013
+LAST_UPDATE: int = 2014
+EMPTY: str = ''
+
+

@@ -1,26 +1,15 @@
 from utils import const as ct
 import psycopg2
 import service.dataframe_service as df_service
-import repository.data_insertion as dao
-from service import retrieve_file as retrieve
-
-try:
-    conn = psycopg2.connect(
-        dbname='postgres',
-        user='postgres',
-        password='postgres',
-        host='localhost',
-        port='5432'
-    )
-except psycopg2.Error as e:
-    print("Error connecting to the database:")
-    print(e)
-else:
-    print("Connection established successfully")
+import repository.manage_data as dao
+from service import manage_files as retrieve
+from repository import connection
 
 
 def main():
     try:
+        conn = connection.connect_to_database()
+        dao.delete_all_table()
         retrieve.remove_file()
         retrieve.download_and_unzip_file()
 

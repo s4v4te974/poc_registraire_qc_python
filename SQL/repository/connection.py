@@ -1,7 +1,4 @@
 import psycopg2
-from sqlalchemy import create_engine
-
-engine = create_engine('postgresql+psycopg2://postgres:postgres@localhost:5432/registraire')
 
 
 def connect_to_database():
@@ -13,6 +10,7 @@ def connect_to_database():
             host='localhost',
             port='5432'
         )
+
         return conn
     except psycopg2.Error as e:
         print("Error connecting to the database:")

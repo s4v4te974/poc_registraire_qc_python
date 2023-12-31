@@ -92,15 +92,15 @@ def map_conti_transfo(df_conti_transfo):
 
 def map_fu_sci(df_fu_sci):
     df_fu_sci['neq'] = df_fu_sci['neq'].fillna(default_value_str)
-    df_fu_sci['neqAssujRel'] = df_fu_sci['neqAssujRel'].fillna(default_value_str)
-    df_fu_sci['denomnSoc'] = df_fu_sci['denomnSoc'].fillna(default_value_str)
-    df_fu_sci['codRelaAssuj'] = df_fu_sci['codRelaAssuj'].fillna(default_value_str)
-    df_fu_sci['lign1Adr'] = df_fu_sci['lign1Adr'].fillna(default_value_str)
-    df_fu_sci['lign2Adr'] = df_fu_sci['lign2Adr'].fillna(default_value_str)
-    df_fu_sci['lign3Adr'] = df_fu_sci['lign3Adr'].fillna(default_value_str)
-    df_fu_sci['lign4Adr'] = df_fu_sci['lign4Adr'].fillna(default_value_str)
-    df_fu_sci['datEfctvt'] = pd.to_datetime(df_fu_sci['datEfctvt'], errors='coerce').fillna(default_date)
-    df_fu_sci['indDisp'] = df_fu_sci['indDisp'].fillna(default_value_char)
+    df_fu_sci['neq_assuj_rel'] = df_fu_sci['neq_assuj_rel'].fillna(default_value_str)
+    df_fu_sci['denomn_soc'] = df_fu_sci['denomn_soc'].fillna(default_value_str)
+    df_fu_sci['cod_rela_assuj'] = df_fu_sci['cod_rela_assuj'].fillna(default_value_str)
+    df_fu_sci['lign1_adr'] = df_fu_sci['lign1_adr'].fillna(default_value_str)
+    df_fu_sci['lign2_adr'] = df_fu_sci['lign2_adr'].fillna(default_value_str)
+    df_fu_sci['lign3_adr'] = df_fu_sci['lign3_adr'].fillna(default_value_str)
+    df_fu_sci['lign4_adr'] = df_fu_sci['lign4_adr'].fillna(default_value_str)
+    df_fu_sci['dat_efctvt'] = pd.to_datetime(df_fu_sci['dat_efctvt'], errors='coerce').fillna(default_date)
+    df_fu_sci['ind_disp'] = df_fu_sci['ind_disp'].fillna(default_value_char)
     return df_fu_sci
 
 

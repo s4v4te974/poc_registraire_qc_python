@@ -1,5 +1,4 @@
 from utils import const as ct
-import psycopg2
 import service.dataframe_service as df_service
 import repository.manage_data as dao
 from service import manage_files as retrieve
